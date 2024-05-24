@@ -1,0 +1,32 @@
+{
+  "name": "rest-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "ts-node ./src/main.ts",
+    "eslint:fix": "eslint ./src --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@promisepending/logger.js": "^1.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "eslint": "^8.54.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-deprecation": "^2.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.2"
+  }
+}
