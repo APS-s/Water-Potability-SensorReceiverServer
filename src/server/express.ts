@@ -66,8 +66,11 @@ export class ExpressServer {
         pH: info.ph,
       };
 
+      const oldData: (typeof toDatabase)[] = await Firebase.instance.getDatabase().ref('data_to_process').once('value').then((snapshot) => snapshot.val());
+      oldData.push(toDatabase);
+
       // Save data to database
-      await Firebase.instance.getDatabase().ref('data_to_process').push(toDatabase);
+      await Firebase.instance.getDatabase().ref('data_to_process').set(oldData);
 
       return res.status(200).json({ message: 'OK' });
     });
